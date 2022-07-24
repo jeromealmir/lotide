@@ -1,4 +1,4 @@
-const eqArrays =  function(array1, array2) {
+const assertArrayEquals =  function(array1, array2) {
   // itemChecker = [];
   result = '';
 
@@ -25,10 +25,10 @@ const eqArrays =  function(array1, array2) {
 }
 
 
-console.log('1st', eqArrays([1, 2, 3], [1, 2, 3])) // => true
+console.log('1st', assertArrayEquals([1, 2, 3], [1, 2, 3])) // => true
 
-console.log('2nd', eqArrays([1, 2, 3], [3, 2, 1])) // => false
+console.log('2nd', assertArrayEquals([1, 2, 3], [3, 2, 1])) // => false
 
-console.log('3rd', eqArrays(["1", "2", "3"], ["1", "2", "3"])) // => true
+console.log('3rd', assertArrayEquals(["1", "2", "3"], ["1", "2", "3"])) // => true
 
-console.log('4th', eqArrays(["1", "2", "3"], ["1", "2", 4])) // => false
+console.log('4th', assertArrayEquals(["1", "2", "3"], ["1", "2", 4])) // => false
