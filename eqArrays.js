@@ -11,15 +11,20 @@ const assertEqual = function(actual, expected) {
 //Required: Implement a function eqArrays which takes in two arrays and returns true or false, based on a perfect match.
 
 const eqArrays =  function(array1, array2) {
-  for(let i = 0; i < array1.length; i++) {
-    for(let j = 0; j < array2.length; j++) {
-      if (array1[i] === array2[j]) {
-        return true;
-      } else {
-        return false;
-      }
-    }
-  }
+  let checker = '';
+
+  for (let i = 0; i < array1.length; i++) {
+    if (array1[i] === array2[i]) {
+      checker = true;
+    } else checker = false;
+  } return checker;
 };
 
-assertEqual(eqArrays([1, 2, 3], [1, 2, 3]), true);
+
+eqArrays([1, 2, 3], [1, 2, 3]) // => true
+eqArrays([1, 2, 3], [3, 2, 1]) // => false
+
+eqArrays(["1", "2", "3"], ["1", "2", "3"]) // => true
+eqArrays(["1", "2", "3"], ["1", "2", 3]) // => false
+
+assertEqual(eqArrays(['hello', 'rosie'], ['hello', 'rosie']), true); // => should PASS
