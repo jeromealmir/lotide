@@ -2,7 +2,7 @@ const assertArrayEquals =  function(array1, array2) {
   // itemChecker = [];
   result = '';
 
-  if (array1 === '' || array2 == '') {
+  if (array1 === '' || array2 === '') {
     return checker = false;
   }
 
