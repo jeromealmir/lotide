@@ -1,23 +1,34 @@
 const eqArrays =  function(array1, array2) {
-  let checker = '';
-  let assertionMessage = '';
+  // itemChecker = [];
+  result = '';
+
+  if (array1 === '' || array2 == '') {
+    return checker = false;
+  }
+
+  if (array1.length !== array2.length) {
+    return checker = false;
+  }
 
   for (let i = 0; i < array1.length; i++) {
-    if (array1[i] === array2[i]) {
-      checker = true;
+    if (array1[i] !== array2[i]) {
+      //checks if individual item matches
+      //itemChecker.push(false);
+      result = `🛑🛑🛑 Assertion Failed: [${array1}] !== [${array2}]`;
+      break //IMPORTANT! breaks the loop!
     } else {
-      checker = false;
+      //checks if individual item matches
+      // itemChecker.push(true);
+      result = `✅✅✅ Assertion Passed: [${array1}] === [${array2}]`;
     }
+  } return result;
+}
 
-    if (checker === true) {
-      assertionMessage = `✅✅✅ Assertion Passed: [${array1}] === [${array2}]`;
-    } else assertionMessage = `🛑🛑🛑 Assertion Failed: [${array1}] !== [${array2}]`;
 
-  } console.log (assertionMessage);
-};
+console.log('1st', eqArrays([1, 2, 3], [1, 3, 3])) // => false
 
-eqArrays([1, 2, 3], [1, 2, 3]) // => true
-eqArrays([1, 2, 3], [3, 2, 1]) // => false
+console.log('2nd', eqArrays([1, 2, 3], [3, 2, 1])) // => false
 
-eqArrays(["1", "2", "3"], ["1", "2", "3"]) // => true
-eqArrays(["1", "2", "3"], ["1", "2", 3]) // => false
+console.log('3rd', eqArrays(["1", "2", "3"], ["1", "2", "3"])) // => true
+
+console.log('4th', eqArrays(["1", "2", "3"], ["1", "2", 4])) // => false
