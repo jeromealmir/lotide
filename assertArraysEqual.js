@@ -18,7 +18,7 @@ const assertArrayEquals =  function(array1, array2) {
       break //IMPORTANT! breaks the loop!
     } else {
       //checks if individual item matches
-      // itemChecker.push(true);
+      // itemChecker.push(true)
       result = `✅✅✅ Assertion Passed: [${array1}] === [${array2}]`;
     }
   } return result;
