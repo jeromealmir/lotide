@@ -13,7 +13,7 @@ const assertArrayEquals =  function(array1, array2) {
   for (let i = 0; i < array1.length; i++) {
     if (array1[i] !== array2[i]) {
       //checks if individual item matches
-      //itemChecker.push(false);
+      //itemChecker.push(false)
       result = `🛑🛑🛑 Assertion Failed: [${array1}] !== [${array2}]`;
       break //IMPORTANT! breaks the loop!
     } else {
