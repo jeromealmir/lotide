@@ -21,4 +21,4 @@ const countLetters = (string) => {;
 
 
 
-assertEqual(countLetters("lighthouse in the house"), { l: 1, i: 1, g: 1, h: 1, t: 1, o: 1, u: 1, s: 1, e: 1, n: 1 })
+assertEqual(countLetters("lighthouse in the house"), {l: 1});
