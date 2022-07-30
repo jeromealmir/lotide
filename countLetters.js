@@ -19,6 +19,4 @@ const countLetters = (string) => {;
   }console.log(myObj);
 }
 
-
-
 countLetters("lighthouse in the house");
