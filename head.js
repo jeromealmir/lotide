@@ -10,8 +10,8 @@ const assertEqual = function(actual, expected) {
 
 // HEAD FUNCTION
 
-const head = function(parameter) {
-  return parameter.shift();
+const head = function(array) {
+  return array.shift();
 }
 
 //TEST CODE
