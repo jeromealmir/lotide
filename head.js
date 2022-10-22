@@ -8,14 +8,13 @@ const assertEqual = function(actual, expected) {
   }
 };
 
-// HEAD FUNCTION goes here
+// HEAD FUNCTION
 
 const head = function(parameter) {
   return parameter.shift();
 }
 
 //TEST CODE
-
 
 assertEqual(head([]), 5);
 assertEqual(head([5]), 5);
