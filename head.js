@@ -1,4 +1,4 @@
-//ASSERT FUNCTION
+//assertEqual Function
 
 const assertEqual = function(actual, expected) {
   if (actual === expected) {
@@ -8,7 +8,7 @@ const assertEqual = function(actual, expected) {
   }
 };
 
-// HEAD FUNCTION
+//head Function
 
 const head = function(array) {
   return array.shift();
