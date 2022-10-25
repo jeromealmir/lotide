@@ -1,4 +1,4 @@
-//ASSERT FUNCTION
+//assertEqual Function
 
 const assertEqual = function(actual, expected) {
   if (actual === expected) {
@@ -8,11 +8,11 @@ const assertEqual = function(actual, expected) {
   }
 };
 
-//EQARRAYS FUNCTIOn
+//eqArrays Function
 
-const eqArrays = function(array1, array2) {
-  for (let i = 0; i < array1.length; i++) {
-    if (array1[i] !== array2[i]) {
+const eqArrays = function(actual, expected) {
+  for (let i = 0; i < actual.length; i++) {
+    if (actual[i] !== expected[i]) {
       return false;
     }
   }
