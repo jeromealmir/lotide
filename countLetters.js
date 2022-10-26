@@ -24,4 +24,4 @@ const countLetters = function(string) {
   return counter;
 };
 
-console.log(countLetters('lighthouse in the house'));
+assertEqual(countLetters('lighthouse in the house').e, 3);
