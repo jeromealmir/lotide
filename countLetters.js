@@ -12,7 +12,7 @@ const assertEqual = function(actual, expected) {
 
 const countLetters = function(string) {
   console.log(string.split(' '))
-  let flattenString = string.split(' ').join('');
+  const flattenString = string.split(' ').join('');
   let counter = {};
   for (const key of flattenString) {
     if (counter[key]) {
