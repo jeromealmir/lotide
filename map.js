@@ -29,10 +29,10 @@ const map = (array, callback) => {
     results.push(callback(item));
   }
   return results;
-}
+};
 
 const results1 = map(words, word => word[0]);
-const results2 = map(words, word => word.toUpperCase())
+const results2 = map(words, word => word.toUpperCase());
 
-assertArraysEqual(results1, [ 'g', 'c', 't', 'm', 't' ])
-assertArraysEqual(results2, ["GROUND", "CONTROL", "TO", "MAJOR", "TOM"])
+assertArraysEqual(results1, [ 'g', 'c', 't', 'm', 't' ]);
+assertArraysEqual(results2, ["GROUND", "CONTROL", "TO", "MAJOR", "TOM"]);
