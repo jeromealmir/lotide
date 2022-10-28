@@ -1,11 +1,17 @@
 //eqArrays Function
 
 const eqArrays = function(actual, expected) {
+
+  if ((actual.length !== expected.length)) {
+    return false;
+  }
+
   for (let i = 0; i < actual.length; i++) {
     if (actual[i] !== expected[i]) {
       return false;
     }
   }
+  
   return true;
 };
 
@@ -34,9 +40,9 @@ const middle = function(array) {
   return middleNumber;
 };
 
-assertArraysEqual(middle([1]), []);
+assertArraysEqual(middle([]), []);
 assertArraysEqual(middle([1, 2]), []);
 assertArraysEqual(middle([1, 2, 3]), [2]);
 assertArraysEqual(middle([1, 2, 3, 4, 5]), [3]);
-assertArraysEqual(middle([1, 2, 3, 4]), [2, 3]);
+assertArraysEqual(middle([1, 2, 3, 4]), [2, 3,]);
 assertArraysEqual(middle([1, 2, 3, 4, 5, 6]), [3, 4]);
