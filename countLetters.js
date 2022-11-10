@@ -11,7 +11,7 @@ const assertEqual = function(actual, expected) {
 //countLetters Function
 
 const countLetters = function(string) {
-  console.log(string.split(' '))
+  console.log(string.split(' '));
   const flattenString = string.split(' ').join('');
   let counter = {};
   for (const key of flattenString) {
