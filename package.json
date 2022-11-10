@@ -1,8 +1,8 @@
 {
-  "name": "lotide",
+  "name": "lotide-jeromealmir",
   "version": "1.0.0",
-  "description": "",
-  "main": "assertArraysEqual.js",
+  "description": "A mini clone of the [Lodash](https://lodash.com) library.",
+  "main": "index.js",
   "directories": {
     "test": "test"
   },
@@ -13,7 +13,7 @@
     "type": "git",
     "url": "git+https://github.com/jeromealmir/lotide.git"
   },
-  "author": "",
+  "author": "Jerome Lagbas (https://github.com/jeromealmir)",
   "license": "ISC",
   "bugs": {
     "url": "https://github.com/jeromealmir/lotide/issues"
