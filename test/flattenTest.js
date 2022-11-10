@@ -8,4 +8,4 @@ describe('#flatten', () => {
   it('returns ["a", "b"] for [[[["a"], ["b"]]], [[]]]', () => {
     assert.deepEqual(_.flatten([[[['a'], ['b']]], [[]]]), ['a', 'b']);
   });
-})
+});

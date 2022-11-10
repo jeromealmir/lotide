@@ -17,4 +17,4 @@ describe('#middle', () => {
   it('return [2, 3] for [1, 2, 3, 4]', () => {
     assert.deepEqual(_.middle([1, 2, 3, 4]), [2, 3]);
   });
-})
+});
