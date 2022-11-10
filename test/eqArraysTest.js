@@ -1,10 +1,9 @@
-const assertEqual = require('../assertEqual');
-const eqArrays = require('../eqArrays');
+const _ = require('../index');
 
-eqArrays([1, 2, 3], [1, 2, 3]); // => true
-eqArrays([1, 2, 3], [3, 2, 1]); // => false
+_.eqArrays([1, 2, 3], [1, 2, 3]); // => true
+_.eqArrays([1, 2, 3], [3, 2, 1]); // => false
 
-eqArrays(['1', '2', '3'], ['1', '2', '3']); // => true
-eqArrays(['1', '2', '3'], ['1', '2', 3]); // => false
+_.eqArrays(['1', '2', '3'], ['1', '2', '3']); // => true
+_.eqArrays(['1', '2', '3'], ['1', '2', 3]); // => false
 
-assertEqual(eqArrays([1, 2, 3], [1, 2, 3]), true); // => should PASS
+_.assertEqual(_.eqArrays([1, 2, 3], [1, 2, 3]), true); // => should PASS
