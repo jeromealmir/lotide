@@ -1,9 +1,17 @@
+const { assert } = require('chai');
 const _ = require('../index');
 
-_.eqArrays([1, 2, 3], [1, 2, 3]); // => true
-_.eqArrays([1, 2, 3], [3, 2, 1]); // => false
-
-_.eqArrays(['1', '2', '3'], ['1', '2', '3']); // => true
-_.eqArrays(['1', '2', '3'], ['1', '2', 3]); // => false
-
-_.assertEqual(_.eqArrays([1, 2, 3], [1, 2, 3]), true); // => should PASS
+describe('#eqArrays', () => {
+  it('return true for [1, 2, 3], [1, 2, 3]', () => {
+    assert.deepEqual(_.eqArrays([1, 2, 3], [1, 2, 3]), true)
+  });
+  it('return false for [1, 2, 3], [3, 2, 1]', () => {
+    assert.deepEqual(_.eqArrays([1, 2, 3], [3, 2, 1]), false)
+  });
+  it("return true for ['1', '2', '3'], ['1', '2', '3']", () => {
+    assert.deepEqual(_.eqArrays(['1', '2', '3'], ['1', '2', '3']), true)
+  });
+  it("return false for ['1', '2', '3'], ['1', '2', 3]", () => {
+    assert.deepEqual(_.eqArrays(['1', '2', '3'], ['1', '2', 3]), false)
+  });
+});
