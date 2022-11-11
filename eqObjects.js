@@ -1,4 +1,4 @@
-const _ = require('./index');
+const eqArrays = require('./eqArrays')
 
 const eqObjects = function(object1, object2) {
 
@@ -8,7 +8,7 @@ const eqObjects = function(object1, object2) {
 
   for (const key in object1) {
     if (Array.isArray(object1[key]) && Array.isArray(object2[key])) {
-      return _.eqArrays(object1[key], object2[key]);
+      return eqArrays(object1[key], object2[key]);
     }
     if (object1[key] !== object2[key]) {
       return false;
