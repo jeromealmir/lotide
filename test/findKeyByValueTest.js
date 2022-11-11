@@ -4,15 +4,15 @@ const _ = require('../index');
 describe('#findKeyByValue', () => {
 
   const bestTVShowsByGenre = {
-  sci_fi: "The Expanse",
-  comedy: "Brooklyn Nine-Nine",
-  drama:  "The Wire"
+    sciFi: "The Expanse",
+    comedy: "Brooklyn Nine-Nine",
+    drama:  "The Wire"
   };
 
   it('return "drama" for "The Wire")', () => {
-    assert.strictEqual(_.findKeyByValue(bestTVShowsByGenre, "The Wire"), 'drama')
+    assert.strictEqual(_.findKeyByValue(bestTVShowsByGenre, "The Wire"), 'drama');
   });
   it('return undefined for "That \'70s Show")', () => {
-    assert.strictEqual(_.findKeyByValue(bestTVShowsByGenre, "That '70s Show"), undefined)
+    assert.strictEqual(_.findKeyByValue(bestTVShowsByGenre, "That '70s Show"), undefined);
   });
-})
+});

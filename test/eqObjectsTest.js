@@ -10,18 +10,18 @@ describe('#eqObjects', () => {
     cd: { c: "1", d: ["2", 3] },
     dc: { d: ["2", 3], c: "1" },
     cd2: { c: "1", d: ["2", 3, 4] },
-  }
+  };
 
   it('return true for (objList.ab, objList.ba)', () => {
-    assert.strictEqual(_.eqObjects(objList.ab, objList.ba), true)
+    assert.strictEqual(_.eqObjects(objList.ab, objList.ba), true);
   });
   it('return false for (objList.ab, objList.abc)', () => {
-    assert.strictEqual(_.eqObjects(objList.ab, objList.abc), false)
+    assert.strictEqual(_.eqObjects(objList.ab, objList.abc), false);
   });
   it('return true for (objList.cd, objList.dc)', () => {
-    assert.strictEqual(_.eqObjects(objList.cd, objList.dc), true)
+    assert.strictEqual(_.eqObjects(objList.cd, objList.dc), true);
   });
   it('return false for (objList.cd, objList.cd2)', () => {
-    assert.strictEqual(_.eqObjects(objList.cd, objList.cd2), false)
+    assert.strictEqual(_.eqObjects(objList.cd, objList.cd2), false);
   });
-})
+});
