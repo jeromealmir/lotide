@@ -1,32 +1,3 @@
-//eqArrays Function
-
-const eqArrays = function(actual, expected) {
-
-  if ((actual.length !== expected.length)) {
-    return false;
-  }
-
-  for (let i = 0; i < actual.length; i++) {
-    if (actual[i] !== expected[i]) {
-      return false;
-    }
-  }
-  
-  return true;
-};
-
-//assertArraysEqual Function
-
-const assertArraysEqual = function(actual, expected) {
-  if (eqArrays(actual, expected)) {
-    console.log(`🟢🟢🟢 Assertion Passed: [${actual}] === [${expected}]`);
-  } else {
-    console.log(`❌❌❌ Assertion Failed: [${actual}] !== [${expected}]`);
-  }
-};
-
-//letterPositions Function
-
 const letterPositions = function(sentence) {
   const results = {};
   for (let i = 0; i < sentence.length; i++) {
@@ -42,6 +13,4 @@ const letterPositions = function(sentence) {
   return results;
 };
 
-letterPositions('lighthouse in the house');
-
-assertArraysEqual(letterPositions('hello').e, [1]);
+module.exports = letterPositions;
