@@ -10,6 +10,6 @@ const letterPosition = require('./letterPosition');
 const findKeyByValue = require('./findKeyByValue');
 const eqObjects = require('./eqObjects');
 const without = require('./without');
+const countLetters = require('./countLetters');
 
-
-module.exports = { head, tail, middle, assertEqual, eqArrays, assertArraysEqual, flatten, countOnly, letterPosition, findKeyByValue, eqObjects, without };
+module.exports = { head, tail, middle, assertEqual, eqArrays, assertArraysEqual, flatten, countOnly, letterPosition, findKeyByValue, eqObjects, without, countLetters };
