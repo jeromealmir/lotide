@@ -24,4 +24,13 @@ describe('#eqObjects', () => {
   it('return false for (objList.cd, objList.cd2)', () => {
     assert.strictEqual(_.eqObjects(objList.cd, objList.cd2), false);
   });
+  it('return true for { a: { z: 1 }, b: 2 }, { a: { z: 1 }, b: 2 }', () => {
+    assert.strictEqual(_.eqObjects({ a: { z: 1 }, b: 2 }, { a: { z: 1 }, b: 2 }), true);
+  });
+  it('return false for { a: { y: 0, z: 1 }, b: 2 }, { a: { z: 1 }, b: 2 }', () => {
+    assert.strictEqual(_.eqObjects({ a: { y: 0, z: 1 }, b: 2 }, { a: { z: 1 }, b: 2 }), false);
+  });
+  it('return false for { a: { y: 0, z: 1 }, b: 2 }, { a: 1, b: 2 }', () => {
+    assert.strictEqual(_.eqObjects({ a: { y: 0, z: 1 }, b: 2 }, { a: 1, b: 2 }), false);
+  });
 });
