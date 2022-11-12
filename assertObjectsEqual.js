@@ -10,7 +10,4 @@ const assertObjectsEqual = function(actual, expected) {
   }
 };
 
-assertObjectsEqual({ a: '1', b: 2 }, { b: 2, a: '1' }); // => should PASS
-assertObjectsEqual({ a: '1', b: 2, c: 3 }, { b: 2, a: '1' }); // => should FAIL
-assertObjectsEqual({}, { b: 2, a: '1' }); // => should FAIL
-
+module.exports = assertObjectsEqual;
