@@ -12,5 +12,6 @@ const eqObjects = require('./eqObjects');
 const without = require('./without');
 const countLetters = require('./countLetters');
 const map = require('./map');
+const assertObjectsEqual = require('./assertObjectsEqual');
 
-module.exports = { head, tail, middle, assertEqual, eqArrays, assertArraysEqual, flatten, countOnly, letterPosition, findKeyByValue, eqObjects, without, countLetters, map };
+module.exports = { head, tail, middle, assertEqual, eqArrays, assertArraysEqual, flatten, countOnly, letterPosition, findKeyByValue, eqObjects, without, countLetters, map, assertObjectsEqual };
