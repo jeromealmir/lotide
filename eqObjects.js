@@ -7,18 +7,20 @@ const eqObjects = function(object1, object2) {
   }
 
   for (const key in object1) {
-    if (Array.isArray(object1[key]) && Array.isArray(object2[key])) {
-      return eqArrays(object1[key], object2[key]);
+    if (Array.isArray(object1[key])) {
+      if (!eqArrays(object1[key], object2[key])) {
+        return false;
+      }
     }
-
     if (typeof object1[key] === 'object') {
-      return eqObjects(object1[key], object2[key]);
-    }
-
-    if (object1[key] !== object2[key]) {
+      if (!eqObjects(object1[key], object2[key])) {
+        return false;
+      }
+    } else if (object1[key] !== object2[key]) {
       return false;
     }
   }
+  
   return true;
 };
 
